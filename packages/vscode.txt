@@ -1,0 +1,2 @@
+haikalllp.matugen-theme
+vscode-icons-team.vscode-icons
