@@ -54,6 +54,7 @@ hl.on("hyprland.start", function ()
 --   hl.exec_cmd("nm-applet")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
     hl.exec_cmd("awww-daemon")
+    hl.exec_cmd("waybar")
 end)
 
 
@@ -72,7 +73,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -----------------------
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
--- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
+-- Please note permission changes here require a Hyprland` restart and are not applied on-the-fly
 -- for security reasons
 
 -- hl.config({
