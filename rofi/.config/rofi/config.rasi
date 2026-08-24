@@ -1,0 +1,256 @@
+configuration {
+    modes: "drun,window,run,ssh";
+
+    font: "JetBrains Mono 10";
+
+    show-icons: true;
+    icon-theme: "material-mono-light";
+
+    display-drun: " ";
+    display-window: " ";
+    display-run: " ";
+    display-ssh: "󰣀 ";
+
+    drun-display-format: "{name}";
+
+    timeout {
+        action: "kb-cancel";
+        delay: 0;
+    }
+
+    filebrowser {
+        directories-first: true;
+        sorting-method: "name";
+    }
+}
+
+
+/* -------------------------
+   Colors
+   ------------------------- */
+
+* {
+    background:     #00000077;
+    background-alt: #11111177;
+
+    foreground:     #ffffff;
+    foreground-dim: #aaaaaa;
+
+    selected:       #18181877;
+    border-color:   #22222277;
+}
+
+
+/* -------------------------
+   Window
+   ------------------------- */
+
+window {
+    width: 38%;
+
+    location: north;
+    anchor: north;
+
+    y-offset: 36px;
+
+    transparency: "real";
+    background-color: @background;
+
+    border: 1px;
+    border-color: @border-color;
+
+    border-radius: 0px;
+
+    padding: 6px;
+}
+
+
+/* -------------------------
+   Main container
+   ------------------------- */
+
+mainbox {
+    background-color: transparent;
+
+    spacing: 5px;
+    padding: 0px;
+}
+
+
+/* -------------------------
+   Search bar
+   ------------------------- */
+
+inputbar {
+    background-color: transparent;
+
+    text-color: @foreground;
+
+    padding: 8px 10px;
+    spacing: 10px;
+
+    children: [
+        prompt,
+        entry
+    ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: transparent;
+
+    text-color: @foreground;
+
+    placeholder: "Search";
+    placeholder-color: @foreground-dim;
+}
+
+
+/* -------------------------
+   Results
+   ------------------------- */
+
+listview {
+    background-color: transparent;
+
+    columns: 1;
+    lines: 8;
+
+    fixed-height: false;
+
+    scrollbar: false;
+
+    spacing: 0px;
+}
+
+
+/* -------------------------
+   Entries
+   ------------------------- */
+
+element {
+    background-color: transparent;
+    text-color: @foreground;
+
+    padding: 7px 10px;
+
+    border: 0px;
+    border-radius: 0px;
+
+    spacing: 10px;
+}
+
+
+/* Force ALL normal rows to be transparent */
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+
+/* Active entries */
+
+element normal.active {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element alternate.active {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+
+/* Urgent entries */
+
+element normal.urgent {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element alternate.urgent {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+
+/* -------------------------
+   Selected entry
+   ------------------------- */
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @foreground;
+}
+
+element selected.active {
+    background-color: @selected;
+    text-color: @foreground;
+}
+
+element selected.urgent {
+    background-color: @selected;
+    text-color: @foreground;
+}
+
+
+/* -------------------------
+   Text
+   ------------------------- */
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+
+    vertical-align: 0.5;
+}
+
+element selected element-text {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+
+/* -------------------------
+   Icons
+   ------------------------- */
+
+element-icon {
+    background-color: transparent;
+
+    size: 1.15em;
+
+    margin: 0px 8px 0px 0px;
+}
+
+element selected element-icon {
+    background-color: transparent;
+}
+
+
+/* -------------------------
+   Other widgets
+   ------------------------- */
+
+case-indicator {
+    background-color: transparent;
+    text-color: @foreground-dim;
+}
+
+scrollbar {
+    background-color: @background-alt;
+
+    handle-color: @foreground-dim;
+
+    width: 2px;
+}
