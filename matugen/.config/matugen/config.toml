@@ -7,3 +7,8 @@ output_path = '~/.cache/matugen/vscode-colors'
 [templates.vscode-json]
 input_path = './templates/vscode-colors.json'
 output_path = '~/.cache/matugen/vscode-colors.json'
+
+
+[templates.firefox_websites]
+input_path = '~/.config/matugen/templates/firefox_websites.css'
+output_path = '~/.config/matugen/generated/firefox_websites.css'

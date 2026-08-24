@@ -256,7 +256,8 @@ hl.device({
 })
 
 
----------------------
+---------------------    /* background: linear-gradient(
+
 ---- KEYBINDINGS ----
 ---------------------
 
@@ -266,6 +267,11 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("code"))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show window"))
+hl.bind(" + Print", hl.dsp.exec_cmd("grim Images/Screenshots/ss_$(date +%s).png"))
+hl.bind("CONTROL + SHIFT + S", hl.dsp.exec_cmd([[grim -g "$(slurp)" "Images/Screenshots/ss_$(date +%s).png"]]))
+
+
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
