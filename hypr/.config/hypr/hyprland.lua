@@ -378,3 +378,21 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.window_rule({
+    match = {
+        class = "code"
+    },
+    opacity = "0.75"
+})
+
+
+hl.config({
+    decoration = {
+        blur = {
+            enabled = true,
+            size = 2,
+            passes = 3,
+        },
+    },
+})

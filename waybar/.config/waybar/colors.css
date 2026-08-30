@@ -7,40 +7,40 @@
  */
 
 /* ===== MATUGEN ===== */
-@define-color bar_bg                 #0e1415;
-@define-color bar_fg                 #dde4e3;
-@define-color border                 #80d4d6;
-@define-color hover_fg               #dde4e3;
-@define-color hover_bg               #252b2b;
+@define-color bar_bg                 #101418;
+@define-color bar_fg                 #e0e2e8;
+@define-color border                 #9bcbfb;
+@define-color hover_fg               #e0e2e8;
+@define-color hover_bg               #272a2f;
 
-@define-color workspace_fg           #dde4e3;
-@define-color workspace_active_bg    #004f51;
-@define-color workspace_active_fg    #9cf1f2;
+@define-color workspace_fg           #e0e2e8;
+@define-color workspace_active_bg    #0e4a73;
+@define-color workspace_active_fg    #cee5ff;
 @define-color workspace_urgent_bg    #ffb4ab;
 @define-color workspace_urgent_fg    #690005;
 
-@define-color module_fg              #dde4e3;
-@define-color muted_fg               #bec8c8;
-@define-color muted_bg               #324b4b;
+@define-color module_fg              #e0e2e8;
+@define-color muted_fg               #c2c7cf;
+@define-color muted_bg               #3a4857;
 
 @define-color error_bg               #ffb4ab;
 @define-color error_fg               #690005;
 
 @define-color performance_bg         #93000a;
 @define-color performance_fg         #ffdad6;
-@define-color balanced_bg            #324b4b;
-@define-color balanced_fg            #cce8e8;
-@define-color saver_bg               #344863;
-@define-color saver_fg               #d4e3ff;
+@define-color balanced_bg            #3a4857;
+@define-color balanced_fg            #d5e4f7;
+@define-color saver_bg               #504061;
+@define-color saver_fg               #efdbff;
 
-@define-color media_bg               #324b4b;
-@define-color media_fg               #cce8e8;
-@define-color accent_bg              #004f51;
-@define-color accent_fg              #9cf1f2;
-@define-color tertiary_bg            #344863;
-@define-color tertiary_fg            #d4e3ff;
+@define-color media_bg               #3a4857;
+@define-color media_fg               #d5e4f7;
+@define-color accent_bg              #0e4a73;
+@define-color accent_fg              #cee5ff;
+@define-color tertiary_bg            #504061;
+@define-color tertiary_fg            #efdbff;
 
-@define-color focus_bg               #1a2121;
+@define-color focus_bg               #1c2024;
 @define-color transparent_bg         transparent;
 
 
