@@ -8,17 +8,12 @@ output_path = '~/.cache/matugen/vscode-colors'
 input_path = './templates/vscode-colors.json'
 output_path = '~/.cache/matugen/vscode-colors.json'
 
-[config]
-
 [templates.kitty]
 input_path = './templates/kitty.conf'
 output_path = '~/.config/kitty/themes/Matugen.conf'
 post_hook = 'kitten themes --reload-in=all Matugen'
 
-[config]
-# ...
 [templates.waybar]
-input_path = 'path/to/template'
+input_path = './templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
-# ...

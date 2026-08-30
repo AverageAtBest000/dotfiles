@@ -1,7 +1,7 @@
 @import "colors.css";
 
 * {
-     background-color: primary_container;
+     background-color: @primary_container;
 }
 
 * {

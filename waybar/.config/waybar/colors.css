@@ -1,0 +1,48 @@
+/*
+ * Waybar color switch template
+ *
+ * Render with:
+ *   matugen image /path/to/wallpaper.jpg \
+ *     --import-json-string '{"use_matugen":true}'
+ *
+ * Set use_matugen to false to use the hardcoded palette.
+ *
+ * In ~/.config/waybar/style.css, import the generated file:
+ *   @import "colors.css";
+ *
+ * Then use these semantic colors, e.g.:
+ *   background-color: @bar_bg;
+ *   color: @text;
+ *   background-color: @accent;
+ */
+
+/* ===== MATUGEN ===== */
+
+@define-color bar_bg             #0e1415;
+@define-color bar_bg_alt         #1a2121;
+@define-color text               #dde4e3;
+@define-color text_muted         #bec8c8;
+
+@define-color accent             #80d4d6;
+@define-color accent_text        #003738;
+@define-color accent_container   #004f51;
+@define-color accent_container_text #9cf1f2;
+
+@define-color secondary          #b0cccc;
+@define-color secondary_text     #1b3435;
+@define-color secondary_container #324b4b;
+@define-color secondary_container_text #cce8e8;
+
+@define-color outline            #899392;
+@define-color outline_variant    #3f4949;
+
+@define-color error              #ffb4ab;
+@define-color error_text         #690005;
+
+@define-color hover_bg           #252b2b;
+@define-color active_workspace   #004f51;
+@define-color active_workspace_text #9cf1f2;
+
+@define-color success            #b4c8e9;
+@define-color warning            #b0cccc;
+
