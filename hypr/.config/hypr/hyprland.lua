@@ -99,10 +99,12 @@ hl.config({
 
         border_size = 2,
 
-        col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
-        },
+        -- col = {
+        --     active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
+        --     inactive_border = "rgba(595959aa)",
+        -- },
+
+        
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
         resize_on_border = false,
@@ -140,6 +142,10 @@ hl.config({
         enabled = true,
     },
 })
+
+
+dofile(os.getenv("HOME") .. "/.config/hypr/matugen_colors.lua")
+
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
