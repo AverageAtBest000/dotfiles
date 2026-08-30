@@ -1,3 +1,9 @@
+@import "colors.css";
+
+* {
+     background-color: primary_container;
+}
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, JetBrainsMono SemiBold;

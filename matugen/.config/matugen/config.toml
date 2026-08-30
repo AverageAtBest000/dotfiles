@@ -8,7 +8,17 @@ output_path = '~/.cache/matugen/vscode-colors'
 input_path = './templates/vscode-colors.json'
 output_path = '~/.cache/matugen/vscode-colors.json'
 
+[config]
 
-[templates.firefox_websites]
-input_path = '~/.config/matugen/templates/firefox_websites.css'
-output_path = '~/.config/matugen/generated/firefox_websites.css'
+[templates.kitty]
+input_path = './templates/kitty.conf'
+output_path = '~/.config/kitty/themes/Matugen.conf'
+post_hook = 'kitten themes --reload-in=all Matugen'
+
+[config]
+# ...
+[templates.waybar]
+input_path = 'path/to/template'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+# ...
