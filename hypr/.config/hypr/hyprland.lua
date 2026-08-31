@@ -362,6 +362,13 @@ hl.window_rule({
     no_focus = true,
 })
 
+hl.window_rule({
+    match = {
+        class = "firefox",
+    },
+    opacity = "0.90 override",
+})
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
@@ -383,16 +390,16 @@ hl.window_rule({
     match = {
         class = "code"
     },
-    opacity = "0.75"
+    opacity = "0.90"
 })
 
 
 hl.config({
     decoration = {
         blur = {
-            enabled = true,
+            enabled = false,
             size = 2,
-            passes = 3,
+            passes = 2,
         },
     },
 })
