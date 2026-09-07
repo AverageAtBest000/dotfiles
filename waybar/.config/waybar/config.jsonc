@@ -8,7 +8,7 @@
     // Choose the order of the modules
 
 
-    "margin-top": 10,
+    "margin-top": 0,
     "margin-left": 12,
     "margin-right": 12,
 
@@ -136,7 +136,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
