@@ -28,3 +28,7 @@ post_hook = 'hyprctl reload'
 input_path = "~/.config/matugen/templates/pywalfox.json"
 output_path = "~/.cache/wal/colors.json"
 post_hook = "pywalfox update"
+
+[templates.gtk]
+input_path = './templates/gtk.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
