@@ -303,3 +303,20 @@ label:focus {
     color: @module_fg;
     font-size: 20px;
 }
+
+
+/* ===== TODO POPUP MODULE ===== */
+
+#custom-todo {
+    padding: 0 9px;
+    color: @module_fg;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+#custom-todo:hover {
+    background-color: @hover_bg;
+    color: @hover_fg;
+}
+
+/* ===== END TODO POPUP MODULE ===== */

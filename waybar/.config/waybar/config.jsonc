@@ -14,6 +14,7 @@
 
     "modules-left": [
         "custom/archlogo",
+        "custom/todo",
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
@@ -223,6 +224,12 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/todo": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Todo",
+        "on-click": "$HOME/.config/waybar/todo-popup.sh"
     },
     "custom/archlogo": {
         "format" : " 󰣇"

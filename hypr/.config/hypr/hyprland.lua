@@ -370,6 +370,35 @@ hl.window_rule({
     opacity = "0.90 override",
 })
 
+
+-- ===== PLANIFY TODO POPUP =====
+
+hl.window_rule({
+    name = "planify-todo-popup",
+
+    match = {
+        class = "^io.github.alainm23.planify$",
+    },
+
+    float = true,
+    workspace = "special:todo silent",
+
+    -- Narrow left-side Todo panel
+    size = {
+        "(monitor_w*0.38)",
+        "(monitor_h*0.78)",
+    },
+
+    -- x = 45px from left edge
+    -- y = 44px from top, just below Waybar
+    move = {
+        45,
+        44,
+    },
+})
+
+-- ===== END PLANIFY TODO POPUP =====
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",

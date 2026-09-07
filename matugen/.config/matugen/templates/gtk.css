@@ -30,14 +30,14 @@
  * wallpaper's primary color instead of pure gray.
  */
 window {
-    background-color: {{ colors.surface.default.hex }};
+    background-color: alpha({{ colors.surface.default.hex }}, 0.62);
     color: {{ colors.on_surface.default.hex }};
 }
 
 
 /* Planify font */
 overlay-split-view {
-    font-family: "CaskaydiaCove Nerd Font Mono";
+    font-family: "CaskaydiaCove Nerd Font Mono Bold";
     font-size: 11pt;
 }
 
