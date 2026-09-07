@@ -403,3 +403,14 @@ hl.config({
         },
     },
 })
+
+
+hl.layer_rule({
+    name = "waybar-glass",
+    match = {
+        namespace = "waybar",
+    },
+
+    blur = true,
+    ignore_alpha = 0.2,
+})
