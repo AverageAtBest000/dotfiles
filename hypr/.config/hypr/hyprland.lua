@@ -397,7 +397,7 @@ hl.window_rule({
 hl.config({
     decoration = {
         blur = {
-            enabled = false,
+            enabled = true,
             size = 2,
             passes = 2,
         },
