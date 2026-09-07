@@ -32,3 +32,4 @@ post_hook = "pywalfox update"
 [templates.gtk]
 input_path = './templates/gtk.css'
 output_path = '~/.config/gtk-4.0/gtk.css'
+post_hook = '~/.config/matugen/scripts/reload-gtk.sh'
