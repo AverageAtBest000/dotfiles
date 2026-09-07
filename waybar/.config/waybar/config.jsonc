@@ -1,11 +1,17 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 35, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
+
+
+    "margin-top": 10,
+    "margin-left": 12,
+    "margin-right": 12,
+
     "modules-left": [
         "custom/archlogo",
         "sway/workspaces",
