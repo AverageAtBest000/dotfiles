@@ -277,6 +277,7 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("android-studio"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("chatgpt"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show window"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("grim -t ppm - | satty --filename - --fullscreen"))
 hl.bind(" + Print", hl.dsp.exec_cmd("grim Images/Screenshots/ss_$(date +%s).png"))
 hl.bind("CONTROL + SHIFT + S", hl.dsp.exec_cmd([[grim -g "$(slurp)" "Images/Screenshots/ss_$(date +%s).png"]]))
 
