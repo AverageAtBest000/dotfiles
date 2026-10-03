@@ -2,16 +2,15 @@ flashpico() {
   local file="$1"
   local configure="$2"
   local pico_mount
-
-  if [[ ! -f "$file" ]]; then
+ 
+  if [[ -z "$file" ]]; then
     echo "Usage: flashpico path/to/program.uf2 [true]"
-    echo "The UF2 must already exist."
     return 1
   fi
 
   if [[ "$configure" == "true" ]]; then
     cmake -S . -B build \
-      -DPICO_SDK_PATH="$HOME/pico/pico-sdk" \
+      -DPICO_SDK_PATH="$HOME/Code/CPP/pico/pico-sdk" \
       -DPICO_BOARD=pico || return 1
   fi
 
