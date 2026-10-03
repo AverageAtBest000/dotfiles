@@ -258,7 +258,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -- Example binds, see https://wiki.hypr.land/Configuring/BasicsBinds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
-hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("code"))
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("nvim"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("android-studio"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("chatgpt"))
@@ -380,6 +380,13 @@ hl.window_rule({
 		class = "firefox",
 	},
 	opacity = "0.90 override",
+})
+
+-- Subtle Android Studio translucency; uses the existing compositor blur.
+hl.window_rule({
+	name = "android-studio-opacity",
+	match = { class = "^jetbrains-studio$" },
+	opacity = "0.92 override",
 })
 
 -- ===== PLANIFY TODO POPUP =====

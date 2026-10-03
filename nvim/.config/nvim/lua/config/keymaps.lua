@@ -2,8 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-
--- j for scrolling down and k for up
+-- j moves up and k moves down.
 local map = vim.keymap.set
 
 map({ "n", "v", "o" }, "j", "k", { desc = "Move cursor up" })
