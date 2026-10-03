@@ -61,7 +61,7 @@ a() {
 
 
 source ~/.config/zsh/functions/setImage.zsh
-source ~/.config/zsh/functions/myCommand.zsh
+source ~/.config/zsh/functions/flashpico.zsh
 
 fastfetch
 # Created by `pipx` on 2026-08-30 21:08:54
