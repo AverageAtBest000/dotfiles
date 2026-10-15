@@ -14,10 +14,10 @@ input_path = './templates/kitty.conf'
 output_path = '~/.config/kitty/themes/Matugen.conf'
 post_hook = 'kitten themes --reload-in=all Matugen'
 
-[templates.waybar]
-input_path = './templates/colors.css'
-output_path = '~/.config/waybar/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar'
+[templates.caelestia]
+input_path = './templates/caelestia.json'
+output_path = '~/.cache/matugen/caelestia.json'
+post_hook = 'bash ~/.config/caelestia/sync-colors.sh'
 
 [templates.hypr]
 input_path = './templates/hypr-borders.lua'
@@ -43,3 +43,7 @@ post_hook = 'pkill -USR1 -x nvim || true'
 input_path = './templates/android-studio-colors.json'
 output_path = '~/.cache/matugen/android-studio-colors.json'
 post_hook = 'python3 ~/.config/matugen/scripts/sync-android-studio.py'
+
+[templates.obsidian]
+input_path = './templates/obsidian.css'
+output_path = '~/Obsidian Vault/Rover/.obsidian/snippets/matugen.css'
