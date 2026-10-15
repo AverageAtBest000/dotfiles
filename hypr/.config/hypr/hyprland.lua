@@ -47,9 +47,9 @@ local menu = "hyprlauncher"
 hl.on("hyprland.start", function()
 	--   hl.exec_cmd(terminal)
 	--   hl.exec_cmd("nm-applet")
-	--   hl.exec_cmd("waybar & hyprpaper & firefox")
+	--   hl.exec_cmd("firefox")
 	hl.exec_cmd("awww-daemon")
-	hl.exec_cmd("waybar")
+	hl.exec_cmd("qs -c caelestia -n -d")
 end)
 
 -------------------------------
@@ -257,6 +257,8 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/BasicsBinds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("~/Code/Python/FairProject/tools/Zotero_linux-x86_64/zotero"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("nvim"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("android-studio"))
@@ -407,8 +409,6 @@ hl.window_rule({
 		"(monitor_h*0.78)",
 	},
 
-	-- x = 45px from left edge
-	-- y = 44px from top, just below Waybar
 	move = {
 		45,
 		44,
@@ -449,16 +449,6 @@ hl.config({
 			passes = 2,
 		},
 	},
-})
-
-hl.layer_rule({
-	name = "waybar-glass",
-	match = {
-		namespace = "waybar",
-	},
-
-	blur = true,
-	ignore_alpha = 0.2,
 })
 
 hl.device({
