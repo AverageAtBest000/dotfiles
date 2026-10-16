@@ -1,0 +1,84 @@
+{
+  "appearance": {
+    "font": {
+      "headline": {
+        "family": "Nimbus Mono PS",
+        "large": { "weight": 700 },
+        "medium": { "weight": 700 },
+        "small": { "weight": 700 }
+      },
+      "title": {
+        "family": "Nimbus Mono PS",
+        "large": { "weight": 700 },
+        "medium": { "weight": 700 },
+        "small": { "weight": 700 }
+      },
+      "body": {
+        "family": "Nimbus Mono PS",
+        "large": { "weight": 700 },
+        "medium": { "weight": 700 },
+        "small": { "weight": 700 }
+      },
+      "label": {
+        "family": "Nimbus Mono PS",
+        "large": { "weight": 700 },
+        "medium": { "weight": 700 },
+        "small": { "weight": 700 }
+      },
+      "mono": {
+        "family": "Nimbus Mono PS",
+        "large": { "weight": 700 },
+        "medium": { "weight": 700 },
+        "small": { "weight": 700 }
+      },
+      "clock": "Nimbus Mono PS",
+      "workspaces": "Nimbus Mono PS"
+    },
+    "transparency": {
+      "enabled": true,
+      "base": 0.85,
+      "layers": 0.4
+    }
+  },
+  "general": {
+    "apps": {
+      "terminal": ["kitty"],
+      "audio": ["pavucontrol"],
+      "explorer": ["dolphin"]
+    },
+    "idle": {
+      "lockBeforeSleep": false,
+      "timeouts": []
+    },
+    "battery": {
+      "criticalLevel": -1
+    }
+  },
+  "background": {
+    "enabled": false
+  },
+  "bar": {
+    "clock": {
+      "showDate": true
+    },
+    "statusIcons": [
+      { "id": "audio", "enabled": true },
+      { "id": "network", "enabled": true },
+      { "id": "bluetooth", "enabled": true },
+      { "id": "battery", "enabled": true }
+    ]
+  },
+  "border": {
+    "thickness": 2,
+    "rounding": 10
+  },
+  "dashboard": {
+    "showWeather": false
+  },
+  "lock": {
+    "enabled": false
+  },
+  "sidebar": {
+    "enabled": false
+  }
+}
