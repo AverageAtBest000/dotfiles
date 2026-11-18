@@ -1,0 +1,4 @@
+# Apps bound in hyprland.lua whose package names differ by repo.
+# Install by hand with paru: discord, spotify (or spotify-launcher),
+# planify, hyprlauncher, android-studio, chatgpt desktop client.
+# Zotero is run from ~/Code/Python/FairProject/tools (not packaged).

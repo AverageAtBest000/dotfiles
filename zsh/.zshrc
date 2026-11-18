@@ -6,7 +6,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 bindkey -e
 
-zstyle :compinstall filename '/home/averageatbest/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -19,8 +19,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHED_HOME="$HOME/.cache"
-export XDG_STATE_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 a() {
     local command="$1"
@@ -66,7 +66,7 @@ source ~/.config/zsh/functions/flashesp.zsh
 
 fastfetch
 # Created by `pipx` on 2026-08-30 21:08:54
-export PATH="$PATH:/home/averageatbest/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$HOME/.local/npm/bin:$PATH"
-export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export ANDROID_HOME="$HOME/Android/Sdk"  # Android Studio default on Linux
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"

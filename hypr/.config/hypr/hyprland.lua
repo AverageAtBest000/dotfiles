@@ -48,6 +48,7 @@ hl.on("hyprland.start", function()
 	--   hl.exec_cmd(terminal)
 	--   hl.exec_cmd("nm-applet")
 	--   hl.exec_cmd("firefox")
+	hl.exec_cmd("mkdir -p ~/Images/Screenshots")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("qs -c caelestia -n -d")
 end)
@@ -120,11 +121,14 @@ hl.config({
 			color = 0xee1a1a1a,
 		},
 
+		-- xray = true blurs against the wallpaper only and caches it, so
+		-- translucent windows stay cheap (big win on integrated graphics).
 		blur = {
 			enabled = true,
 			size = 5,
 			passes = 2,
 			vibrancy = 0.1696,
+			xray = true,
 		},
 	},
 
@@ -248,7 +252,7 @@ hl.device({
 	sensitivity = -0.5,
 })
 
----------------------    /* background: linear-gradient(
+---------------------
 
 ---- KEYBINDINGS ----
 ---------------------
@@ -260,21 +264,22 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("~/Code/Python/FairProject/tools/Zotero_linux-x86_64/zotero"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
-hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("nvim"))
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(terminal .. " nvim"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("android-studio"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("chatgpt"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show window"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("grim -t ppm - | satty --filename - --fullscreen"))
-hl.bind(" + Print", hl.dsp.exec_cmd("grim Images/Screenshots/ss_$(date +%s).png"))
-hl.bind("CONTROL + SHIFT + S", hl.dsp.exec_cmd([[grim -g "$(slurp)" "Images/Screenshots/ss_$(date +%s).png"]]))
-hl.bind(mainMod .. "  + M", hl.dsp.exec_cmd("spotify"))
+hl.bind("Print", hl.dsp.exec_cmd("grim ~/Images/Screenshots/ss_$(date +%s).png"))
+hl.bind("CONTROL + SHIFT + S", hl.dsp.exec_cmd([[grim -g "$(slurp)" ~/"Images/Screenshots/ss_$(date +%s).png"]]))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("spotify"))
 
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
@@ -296,6 +301,9 @@ end
 -- Example special workspace (scratchpad)
 --hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+-- Show/hide the scratchpad and the Planify todo panel (they were unreachable before)
+hl.bind(mainMod .. " + grave", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + T", hl.dsp.workspace.toggle_special("todo"))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -439,16 +447,6 @@ hl.window_rule({
 		class = "code",
 	},
 	opacity = "0.90",
-})
-
-hl.config({
-	decoration = {
-		blur = {
-			enabled = true,
-			size = 2,
-			passes = 2,
-		},
-	},
 })
 
 hl.device({

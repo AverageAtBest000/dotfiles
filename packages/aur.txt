@@ -1,4 +1,2 @@
 caelestia-shell
 visual-studio-code-bin
-yay
-yay-debug
