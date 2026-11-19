@@ -14,7 +14,9 @@ if command -v paru >/dev/null; then
 elif command -v yay >/dev/null; then
 	yay -S --needed - < packages/aur.txt
 else
-	echo "   no AUR helper found (sudo pacman -S paru), skipping"
+	echo ":: No AUR helper found, installing paru"
+	sudo pacman -S --needed paru
+	paru -S --needed - < packages/aur.txt
 fi
 
 if command -v code >/dev/null && [ -s packages/vscode.txt ]; then
@@ -34,7 +36,9 @@ for pkg in "${STOW_PKGS[@]}"; do
 	# Back up any real (non-symlink) files that would block stow
 	while IFS= read -r -d '' f; do
 		target="$HOME/${f#"$pkg"/}"
-		if [ -e "$target" ] && [ ! -L "$target" ]; then
+		# Skip if it's already ours (stow may have symlinked a parent directory)
+		if [ -e "$target" ] && [ ! -L "$target" ] &&
+			[ "$(realpath "$target")" != "$(realpath "$f")" ]; then
 			echo "   backing up ~/${f#"$pkg"/} -> .pre-dotfiles"
 			mv "$target" "$target.pre-dotfiles"
 		fi
